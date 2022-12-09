@@ -13,9 +13,16 @@ export const LoginPage = () => {
           <Grid item xs={ 12 } sx={{ mt: 2 }}>
             <TextField 
               label="Correo"
+              InputLabelProps={{
+                style: {
+                  color: 'primary'
+                }
+              }}
               type="email"
               placeholder="correo@google.com"
               fullWidth
+              
+              sx={{  border: '1px solid #ced4da' }}
             />
           </Grid>
 
@@ -25,20 +32,21 @@ export const LoginPage = () => {
               type="password"
               placeholder="Password"
               fullWidth
+              sx={{  border: '1px solid #ced4da' }}
             />
           </Grid>
 
           <Grid container spacing={ 2 } sx={{ mb: 2, mt: 1 }}>
             <Grid item xs={ 12 } sm={ 6 }>
-              <Button variant="contained" fullWidth>
-                Login
+              <Button variant="contained" fullWidth sx={{  border: '1px solid #ced4da' }} >
+                <Typography color='secondary'>Login</Typography>
               </Button>
             </Grid>
 
             <Grid item xs={ 12 } sm={ 6 }>
-              <Button variant="contained" fullWidth>
-                <Google />
-                <Typography sx={{ ml: 1 }}>Google</Typography>
+              <Button variant="contained" fullWidth sx={{  border: '1px solid #ced4da' }}>
+                <Google color='secondary' />
+                <Typography color='secondary' sx={{ ml: 1 }}>Google</Typography>
               </Button>
             </Grid>
           </Grid>
